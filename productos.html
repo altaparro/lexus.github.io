@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Productos</title>
+    <style>
+      body{
+        background-color: white;
+      }
+      table thead{
+        background-color: rgb(255, 102, 0);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+      <button id="btnCrear" type="button" class="btn btn-primary" data-bs-toggle="modal" >CREAR</button>
+        <table id="tablaProductos" class="table mt-2 table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>TIPO</th>
+                    <th>PROVEEDOR</th>
+                    <th>IMAGEN</th>
+                    <TH>EDITAR / BORRAR</TH>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+<div id="modalArticulo" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" bg-primary text-white>
+        <h5 class="modal-title" id="exampleModalLabel">CARGAR PRODUCTO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="nombre" class="col-form-label">NOMBRE:</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="col-form-label">PRECIO:</label>
+            <input type="number" class="form-control" id="precio">
+          </div>
+          <div class="mb-3">
+            <label for="cantidad" class="col-form-label">CANTIDAD:</label>
+            <input type="number" class="form-control" id="cantidad">
+          </div>
+          <div class="mb-3">
+            <label for="tipo" class="col-form-label">TIPO:</label>
+            <input type="number" class="form-control" id="tipo">
+          </div>
+          <div class="mb-3">
+            <label for="proveedor" class="col-form-label">PROVEEDOR:</label>
+            <input type="number" class="form-control" id="proveedor">
+          </div>
+          <div class="mb-3">
+            <label for="imagen" class="col-form-label">IMAGEN:</label>
+            <input type="file" class="form-control" id="imagen" placeholder="URL de la imagen">
+          </div>         
+      </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+            <button type="submit" class="btn btn-primary">ACEPTAR</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/productos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+  </body>
+</html>
